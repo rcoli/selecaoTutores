@@ -1,0 +1,140 @@
+@charset "iso-8859-1";
+/* CSS Document */
+.logout {
+	text-align:right; 
+	padding:5px 5px 0 0; 
+	font-size:80%;
+	margin:0;
+	float:right;
+	color: #0592b6;
+}
+.logout a {
+	color:#06b8e5;
+}
+.logout a:hover {
+	color: #0592b6;
+}
+.main_menu, .sub_menu {
+	clear:both;
+}
+.main_menu, .sub_menu, .navegation {
+	font-family:"Trebuchet MS", Tahoma, Geneva, sans-serif !important;
+	list-style:none;
+	padding:5px;
+	margin:0;	
+}
+.navegation {
+	text-align:center;
+}
+.main_menu li, .sub_menu li, .navegation li{
+	display:inline;
+	padding:0;
+	margin:0;
+}
+.main_menu li a {
+	color:#FFF;
+	margin:0 -1px;
+	padding:5px 12px;
+	text-decoration:none;
+}
+.main_menu li a:hover  {
+	background:url(../img/bg_menu_on.gif) repeat-x center;	
+	color:#FFF;
+	text-decoration:underline;
+}
+.unselected {
+	background:url(../img/bg_menu.gif) repeat-x center;
+}
+.selected {
+	background:url(../img/bg_menu_on.gif) repeat-x center;
+}
+.sub_menu {
+	background:#0b4a73;
+}
+.sub_menu a {
+	font-size:90%;
+	color: #06b8e5;
+	text-decoration:none;
+	margin:0 6px;
+	background-image: none;
+}
+.sub_menu a:hover {
+	text-decoration:underline;
+}
+.twoColElsLtHdr #container #header div {
+	border:3px solid #0b4a73;
+}
+.twoColElsLtHdr #container #header #t3 #Lt3{
+	margin-left:74px;
+}
+.twoColElsLtHdr #container #header #t4 #Lt4{
+	margin-left:215px;
+}
+/*Bolsistas*/
+.twoColElsLtHdr #container #header #t5 #Lt5{
+	margin-left:280px;
+}
+/*Atendimento 0800*/
+.twoColElsLtHdr #container #header #t6 #Lt6{
+	margin-left:420px;
+}
+/*Simulados*/
+.twoColElsLtHdr #container #header #t7 #Lt7{
+	margin-left:560px;
+}
+/*Site*/
+.twoColElsLtHdr #container #header #t8 #Lt8{
+	margin-left:520px;
+}
+.twoColElsLtHdr #sidebar ul {
+	list-style:none;
+	padding:0;
+	margin:10px 10px 20px 10px;
+	font-size:80%;
+}
+.twoColElsLtHdr #sidebar ul li {
+	padding:0;
+	border-bottom:1px dotted #ccc;
+
+}
+.twoColElsLtHdr #sidebar ul li a{
+	color:#0f67a1;
+	text-decoration:none;
+	display:block;
+	padding:5px;
+}
+.twoColElsLtHdr #sidebar ul li a:hover{
+	color:#000;
+	text-decoration:underline;
+	background-color:#EEE;
+}
+.twoColElsLtHdr #sidebar h4 {
+	padding:3px;
+	margin:10px 10px 0 10px;
+	background-color:#CCC;
+	color:#0B506A;
+}
+.filter {
+	margin:10px;
+	padding:0;
+	border-spacing:0;
+}
+.filter td, .filter th{
+	font-size:70%;
+	padding:2px;
+	border-bottom:1px dotted #CCC;
+}
+.filter th{
+	padding:5px 0px 5px 2px;
+	border-bottom:1px solid #999;
+	font-weight:bold;
+	background-color: #FFF;
+	color:#47370B;
+}
+.filter tr:nth-child(even) {background: #FFF}
+.filter tr:nth-child(odd)  {background: #f5f6fc} /*#f3f5fc or #f1f5fc or #f0f5fc}*/
+
+.context_menu {
+	border:none;
+}
+

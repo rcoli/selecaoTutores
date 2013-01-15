@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- - Sample namespace-based configuration - -->
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<debug />
+
+	<global-method-security pre-post-annotations="enabled" />
+
+	<http pattern="/admin" security="none" />
+	<http pattern="/inscricao" security="none" />
+	<http pattern="/static/**" security="none" />
+	<http pattern="/index.jsp" security="none" />
+	
+
+	<!-- PÁGINA GERÊNCIA ADMINISTRATIVA -->
+	<http use-expressions="true">
+
+		<intercept-url pattern="/admin/**" access="hasRole('supervisor')" />
+		<!--<intercept-url pattern="/inscricao/**" access="isAuthenticated()" />-->
+
+		<!-- Allow all other requests. In a real application you should adopt a 
+			whitelisting approach where access is not allowed by default -->
+		<intercept-url pattern="/**" access="permitAll" />
+
+		<!-- Set the login page and what to do if login fails -->
+		<form-login login-page="/admin" default-target-url="/admin/disciplina"
+			authentication-failure-url="/inscricao?login_error" />
+		<logout logout-success-url="/admin" delete-cookies="JSESSIONID" />
+
+		<!-- Uncomment to limit the number of sessions a user can have -->
+		<session-management invalid-session-url="/inscricao?login_error">
+			<concurrency-control max-sessions="5"
+				error-if-maximum-exceeded="true" />
+		</session-management>
+
+	</http>
+	
+
+
+	<authentication-manager>
+		<authentication-provider>
+			<!-- <password-encoder ref="encoder" /> -->
+			<user-service>
+				<user name="12345678909" password="01/01/2000" authorities="supervisor, user, teller" />
+
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

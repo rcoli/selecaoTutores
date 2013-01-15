@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory name="">
+		<property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+		<property name="hibernate.cache.use_minimal_puts">false</property>
+		<property name="hibernate.cache.use_query_cache">false</property>
+		<property name="hibernate.connection.charSet">UTF-8</property>
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.pool_size">1</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/seltutores</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password"></property>
+		<property name="hibernate.current_session_context_class">thread</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.format_sql">true</property>
+		<property name="hibernate.max_fetch_depth">3</property>
+		<property name="hibernate.search.autoregister_listeners">false</property>
+		<property name="hibernate.show_sql">false</property>
+
+
+		<mapping class="br.edu.cederj.model.Disciplina" />
+		<mapping class="br.edu.cederj.model.Polo" />
+		<mapping class="br.edu.cederj.model.Candidato" />
+		<mapping class="br.edu.cederj.model.Concurso" />
+		<mapping class="br.edu.cederj.model.Fase" />
+		<mapping class="br.edu.cederj.model.Inscricao" />
+		<mapping class="br.edu.cederj.model.Vaga" />
+
+
+
+	</session-factory>
+</hibernate-configuration>
